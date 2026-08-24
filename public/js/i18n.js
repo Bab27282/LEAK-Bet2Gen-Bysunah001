@@ -2,6 +2,27 @@
 window.I18N = {
   en: {
     connectDiscord: 'Connect with Discord',
+    connecting: 'Connecting…',
+    p_admin: 'Admin', p_member: 'Member',
+
+    hubTitle: 'Hey {name}', hubDesc: 'Your quota, your cooldown and the last 7 days.',
+    servicesTitle: 'Services', servicesDesc: 'Pick a service and claim your code.',
+    servicesEmpty: 'No service available right now.',
+    rankingTitle: 'Ranking', rankingDesc: 'Top generators of all time.',
+    historyTitle: 'History', historyDesc: 'Every code you claimed.',
+
+    joinDiscord: 'Join',
+    readyNow: 'Ready to generate', readyIn: 'Ready in {v}',
+    gensCount: '{n} gens', servicesCount: '{n} services', usersFound: '{n} members',
+
+    edit: 'Edit', stock: 'Stock', noServices: 'No service yet.',
+    stockAlert: '{n} service(s) running low on stock:',
+
+    a_cooldownTitle: 'Slow down',
+    a_cooldownMsg: 'You have to wait before generating again. Boost or invite friends on <span class=\"kw\">Discord</span> to cut your cooldown down to 30s.',
+    a_dailyTitle: 'Daily limit reached',
+    a_dailyMsg: 'You used all <span class=\"kw\">{limit}</span> generations for today. Come back tomorrow.',
+    reduceCooldown: 'Reduce my cooldown on Discord  →',
     demoAdmin: 'Demo: enter as admin (Sunah)',
     users: 'users', services: 'services', generated: 'generated',
 
@@ -9,7 +30,7 @@ window.I18N = {
 
     yourDay: 'Your day', todayCount: '{used} / {limit} today',
     yourCooldown: 'Your cooldown: {v}',
-    generateNow: 'Generate now  →',
+    generateNow: 'Generate now',
     last7days: 'last 7 days',
     fasterTitle: 'Want a faster cooldown?',
     fasterDesc: 'Invite friends or boost on Discord — roles update automatically (down to 30s).',
@@ -86,6 +107,27 @@ window.I18N = {
 
   fr: {
     connectDiscord: 'Se connecter avec Discord',
+    connecting: 'Connexion…',
+    p_admin: 'Admin', p_member: 'Membre',
+
+    hubTitle: 'Salut {name}', hubDesc: 'Ton quota, ton cooldown et les 7 derniers jours.',
+    servicesTitle: 'Services', servicesDesc: 'Choisis un service et récupère ton code.',
+    servicesEmpty: 'Aucun service disponible pour le moment.',
+    rankingTitle: 'Classement', rankingDesc: 'Les meilleurs générateurs de tous les temps.',
+    historyTitle: 'Historique', historyDesc: 'Tous les codes que tu as récupérés.',
+
+    joinDiscord: 'Rejoindre',
+    readyNow: 'Prêt à générer', readyIn: 'Dispo dans {v}',
+    gensCount: '{n} gens', servicesCount: '{n} services', usersFound: '{n} membres',
+
+    edit: 'Modifier', stock: 'Stock', noServices: 'Aucun service pour l’instant.',
+    stockAlert: '{n} service(s) bientôt à court de stock :',
+
+    a_cooldownTitle: 'Doucement',
+    a_cooldownMsg: 'Tu dois patienter avant de regénérer. Boost ou invite des amis sur <span class=\"kw\">Discord</span> pour descendre ton cooldown jusqu’à 30s.',
+    a_dailyTitle: 'Limite journalière atteinte',
+    a_dailyMsg: 'Tu as utilisé tes <span class=\"kw\">{limit}</span> générations du jour. Reviens demain.',
+    reduceCooldown: 'Réduire mon cooldown sur Discord  →',
     demoAdmin: 'Démo : entrer en admin (Sunah)',
     users: 'membres', services: 'services', generated: 'générés',
 
@@ -93,7 +135,7 @@ window.I18N = {
 
     yourDay: 'Ta journée', todayCount: '{used} / {limit} aujourd’hui',
     yourCooldown: 'Ton cooldown : {v}',
-    generateNow: 'Générer maintenant  →',
+    generateNow: 'Générer maintenant',
     last7days: '7 derniers jours',
     fasterTitle: 'Un cooldown plus rapide ?',
     fasterDesc: 'Invite des amis ou boost sur Discord — les rôles se mettent à jour automatiquement (jusqu’à 30s).',
