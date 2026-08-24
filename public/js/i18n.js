@@ -60,6 +60,8 @@ window.I18N = {
     a_admin: 'Admin', a_default: 'default',
 
     addService: '+ Add service',
+    newService: 'New service', newServiceHint: 'Create a service — name, logo, color, status',
+    nameRequired: 'Please enter a name',
     f_name: 'Name', f_color: 'Color', f_status: 'Status',
     f_logo: 'Logo image URL', f_logo_h: 'Paste a logo/banner image URL to match the real brand (leave empty to use the default).',
     st_active: 'Active', st_restock: 'Awaiting restock', st_disabled: 'Disabled',
@@ -140,7 +142,9 @@ window.I18N = {
     noUsers: 'Aucun membre trouvé.',
     a_admin: 'Admin', a_default: 'défaut',
 
-    addService: '+ Ajouter un service',
+    addService: '+ Ajouter le service',
+    newService: 'Nouveau service', newServiceHint: 'Crée un service — nom, logo, couleur, statut',
+    nameRequired: 'Entre un nom',
     f_name: 'Nom', f_color: 'Couleur', f_status: 'Statut',
     f_logo: 'URL de l’image du logo', f_logo_h: 'Colle l’URL d’un logo/bannière pour coller à la vraie marque (laisse vide pour le rendu par défaut).',
     st_active: 'Actif', st_restock: 'En attente de restock', st_disabled: 'Désactivé',

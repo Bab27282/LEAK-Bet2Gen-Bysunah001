@@ -526,9 +526,24 @@ async function adminServices(el) {
       <button class="mini" data-action="svc-addcodes" data-id="${s.id}">${t('addCodes')}</button>
     </div>`).join('');
 
-  el.innerHTML = `
-    <div style="margin-bottom:16px"><button class="btn btn-primary btn-inline btn-sm" data-action="svc-add">${t('addService')}</button></div>
-    <div class="admin-svc">${cards}</div>`;
+  const newCard = `
+    <div class="asvc" style="border-style:dashed">
+      <div class="asvc-head">
+        <div class="asvc-dot" id="new-dot" style="background:#3b8bff"></div>
+        <div><b>${t('newService')}</b><div class="sub">${t('newServiceHint')}</div></div>
+      </div>
+      <div class="field"><label>${t('f_name')}</label><input class="input" id="new-name" placeholder="Netflix, Spotify, ..." /></div>
+      <div class="field"><label>${t('f_logo')}</label><input class="input" id="new-logo" placeholder="https://.../logo.png" /><div class="hint">${t('f_logo_h')}</div></div>
+      <div style="display:flex;gap:12px">
+        <div class="field" style="flex:1"><label>${t('f_status')}</label><select class="input" id="new-status">${statusOpts('active')}</select></div>
+        <div class="field"><label>${t('f_color')}</label><input type="color" class="input" id="new-color" value="#3b8bff" style="width:56px;padding:4px" /></div>
+      </div>
+      <button class="btn btn-primary btn-sm" data-action="svc-create">${t('addService')}</button>
+    </div>`;
+
+  el.innerHTML = `<div class="admin-svc">${newCard}${cards}</div>`;
+  const nc = $('#new-color'), nd = $('#new-dot');
+  if (nc && nd) nc.oninput = () => { nd.style.background = nc.value; };
 }
 
 async function adminExport(el) {
@@ -628,11 +643,16 @@ document.addEventListener('click', async (e) => {
   }
 
   // LeakBySunah
-  if (action === 'svc-add') {
-    const name = prompt(t('f_name') + ':', 'New service');
-    if (!name) return;
-    await api('POST', '/api/admin/services', { name, color: '#4a9eff', status: 'active' });
-    adminServices(adminBodyEl()); return;
+  if (action === 'svc-create') {
+    const name = $('#new-name').value.trim();
+    if (!name) { toast(t('nameRequired'), 'warn'); $('#new-name').focus(); return; }
+    await api('POST', '/api/admin/services', {
+      name,
+      logo: $('#new-logo').value.trim(),
+      color: $('#new-color').value,
+      status: $('#new-status').value,
+    });
+    toast(t('t_saved'), 'ok'); adminServices(adminBodyEl()); return;
   }
   if (action === 'svc-save') {
     const card = target.closest('.asvc');
