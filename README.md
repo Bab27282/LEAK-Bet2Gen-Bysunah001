@@ -1,5 +1,8 @@
 # Bet2Gen.xyz — by Sunah
 
+## 💬 Rejoins notre serveur Discord
+👉 **[https://discord.gg/dDN6Vr8HZr](https://discord.gg/dDN6Vr8HZr)**
+
 Plateforme de distribution de **codes de cartes cadeaux** (thème bleu + étoiles),
 reconstruite de A à Z. Front + backend Node.js + base de données fichier (JSON).
 
